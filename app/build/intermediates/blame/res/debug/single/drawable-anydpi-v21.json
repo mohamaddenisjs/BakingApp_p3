@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_play.xml",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-anydpi-v21\\exo_controls_play.xml"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_fastforward.xml",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-anydpi-v21\\exo_controls_fastforward.xml"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_previous.xml",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-anydpi-v21\\exo_controls_previous.xml"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_next.xml",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-anydpi-v21\\exo_controls_next.xml"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_rewind.xml",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-anydpi-v21\\exo_controls_rewind.xml"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_edit_mode_logo.xml",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-anydpi-v21\\exo_edit_mode_logo.xml"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_pause.xml",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-anydpi-v21\\exo_controls_pause.xml"
+    }
+]

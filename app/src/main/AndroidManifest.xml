@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.denis.sundevs.bakingapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="net.denis.sundevs.bakingapp.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="net.denis.sundevs.bakingapp.view.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="net.denis.sundevs.bakingapp.view.activity.MainActivity" />
+        <activity
+            android:name="net.denis.sundevs.bakingapp.view.activity.RecipeActivity"
+            android:parentActivityName="net.denis.sundevs.bakingapp.view.activity.MainActivity" />
+
+        <activity android:name="net.denis.sundevs.bakingapp.view.activity.ConfigurationWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+
+
+        <receiver android:name="net.denis.sundevs.bakingapp.Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/baking_app_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

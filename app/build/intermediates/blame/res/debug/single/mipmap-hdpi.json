@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher_round.png",
+        "source": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\bowl.png",
+        "source": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\src\\main\\res\\mipmap-hdpi\\bowl.png"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_wifi_problem.png",
+        "source": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_wifi_problem.png"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_error.png",
+        "source": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_error.png"
+    }
+]

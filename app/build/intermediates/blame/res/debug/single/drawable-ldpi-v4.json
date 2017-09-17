@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exo_edit_mode_logo.png",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-ldpi-v4\\exo_edit_mode_logo.png"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exo_controls_fastforward.png",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-ldpi-v4\\exo_controls_fastforward.png"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exo_controls_play.png",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-ldpi-v4\\exo_controls_play.png"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exo_controls_rewind.png",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-ldpi-v4\\exo_controls_rewind.png"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exo_controls_next.png",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-ldpi-v4\\exo_controls_next.png"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exo_controls_previous.png",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-ldpi-v4\\exo_controls_previous.png"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exo_controls_pause.png",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\0809384fb5ab54ef4e7de0e8c1d45f99ec46ca3e\\output\\res\\drawable-ldpi-v4\\exo_controls_pause.png"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\307f1c297d3fee6b7c531e309eb31427d9d8ec06\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\307f1c297d3fee6b7c531e309eb31427d9d8ec06\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\307f1c297d3fee6b7c531e309eb31427d9d8ec06\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "E:\\Android\\bakingApps\\Udacity-Baking-App\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Denis\\.android\\build-cache\\307f1c297d3fee6b7c531e309eb31427d9d8ec06\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    }
+]
