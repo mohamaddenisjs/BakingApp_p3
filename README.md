@@ -1,2 +1,2 @@
-# My-Classic-Baking-App
-Thats one of my classic for baking your app. I mean Baking class. Also thats for Advanced Android Udacity Project. Enjoy it.
+# Baking-App Udacity Project
+Thats is the 3rd Project On Udacity NanoDegree Program. thanks Udacity :) 
