@@ -141,6 +141,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
         }
     }
 
+
     @Override
     public void onStart() {
         super.onStart();
@@ -160,6 +161,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     @Override
     public void onPause() {
         super.onPause();
+
         if (Util.SDK_INT <= 23) {
             releasePlayer();
         }
