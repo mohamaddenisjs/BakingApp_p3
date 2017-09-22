@@ -27,8 +27,8 @@ import net.denis.sundevs.bakingapp.model.Steps;
 import net.denis.sundevs.bakingapp.view.adapter.RecipeStepsAdapter;
 import net.denis.sundevs.bakingapp.view.listener.RecipeStepOnClickListener;
 
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_INGREDIENTS;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_STEPS;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_INGREDIENTS;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEPS;
 
 /**
  * Created by moham on 10/09/17.

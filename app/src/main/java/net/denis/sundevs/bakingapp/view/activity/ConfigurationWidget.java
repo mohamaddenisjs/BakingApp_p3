@@ -29,10 +29,10 @@ import net.denis.sundevs.bakingapp.model.Recipe;
 import net.denis.sundevs.bakingapp.view.adapter.SimpleRecipesAdapter;
 import net.denis.sundevs.bakingapp.view.listener.SimpleRecipeOnClickListener;
 
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_RECIPE;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.LIST_DATA;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.LIST_STATE;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.WIDGET_ID;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_RECIPE;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.LIST_DATA;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.LIST_STATE;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.WIDGET_ID;
 
 /**
  * Created by moham on 10/09/17.

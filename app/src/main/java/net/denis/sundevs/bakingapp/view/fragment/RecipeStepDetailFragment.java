@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,20 +25,22 @@ import com.google.android.exoplayer2.ui.SimpleExoPlayerView;
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
 
-import org.greenrobot.eventbus.EventBus;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import net.denis.sundevs.bakingapp.App;
 import net.denis.sundevs.bakingapp.R;
 import net.denis.sundevs.bakingapp.event.RecipeStepEvent;
 import net.denis.sundevs.bakingapp.model.Steps;
-import net.denis.sundevs.bakingapp.util.TAG;
+import net.denis.sundevs.bakingapp.util.Constant;
 
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_STEP;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_STEP_FIRST;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_STEP_LAST;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_STEP_NUMBER;
+import org.greenrobot.eventbus.EventBus;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP_FIRST;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP_LAST;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP_NUMBER;
 
 /**
  * Created by moham on 10/09/17.
@@ -67,6 +70,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     private int mNumber;
     private boolean mFirst;
     private boolean mLast;
+    private static long position = 0;
 
     public RecipeStepDetailFragment() {
 
@@ -75,6 +79,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         View rootView = inflater.inflate(R.layout.fragment_recipe_step_detail, container, false);
 
         initView(rootView);
@@ -91,7 +96,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
 
         if (!TextUtils.isEmpty(mStep.getThumbnailUrl()) && !mStep.getThumbnailUrl().substring(mStep.getThumbnailUrl().length() - 4, mStep.getThumbnailUrl().length()).equals(".mp4")) {
             mDetailStepImage.setVisibility(View.VISIBLE);
-            TAG.Function.setImageResource(getContext(), mStep.getThumbnailUrl(), mDetailStepImage);
+            Constant.Function.setImageResource(getContext(), mStep.getThumbnailUrl(), mDetailStepImage);
         }
 
         mDetailStepPrev.setVisibility(View.VISIBLE);
@@ -99,6 +104,13 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
 
         if (mFirst) mDetailStepPrev.setVisibility(View.GONE);
         if (mLast) mDetailStepNext.setVisibility(View.GONE);
+
+        if (savedInstanceState != null){
+//            mStep = savedInstanceState.getParcelable(EXTRA_STEP);
+            mNumber = savedInstanceState.getInt(EXTRA_STEP_NUMBER);
+            mFirst = savedInstanceState.getBoolean(EXTRA_STEP_FIRST);
+            mLast = savedInstanceState.getBoolean(EXTRA_STEP_LAST);
+        }
 
         return rootView;
     }
@@ -141,6 +153,22 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
         }
     }
 
+    private void updateResumePosition(long position, boolean playWhenReady){
+        this.position = position;
+        mPlayer.seekTo(position);
+        mPlayer.setPlayWhenReady(playWhenReady);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.v(TAG, "In frag's on save instance state ");
+
+        outState.putInt(EXTRA_STEP_NUMBER, mNumber);
+        outState.putBoolean(EXTRA_STEP_FIRST, mFirst);
+        outState.putBoolean(EXTRA_STEP_LAST, mLast);
+
+    }
 
     @Override
     public void onStart() {
@@ -161,8 +189,10 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     @Override
     public void onPause() {
         super.onPause();
-
         if (Util.SDK_INT <= 23) {
+            mPlayer.setPlayWhenReady(false);
+            mPlayer.stop();
+            mPlayer.release();
             releasePlayer();
         }
     }
@@ -180,10 +210,13 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
             mPlaybackPosition = mPlayer.getCurrentPosition();
             mCurrentWindow = mPlayer.getCurrentWindowIndex();
             mPlayWhenReady = mPlayer.getPlayWhenReady();
+            updateResumePosition(position, false);
             mPlayer.release();
             mPlayer = null;
         }
     }
+
+
 
     @Override
     public void onClick(View v) {

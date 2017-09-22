@@ -16,7 +16,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static net.denis.sundevs.bakingapp.util.TAG.Data.BAKING_APP_URL;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.BAKING_APP_URL;
 
 /**
  * Created by moham on 10/09/17.

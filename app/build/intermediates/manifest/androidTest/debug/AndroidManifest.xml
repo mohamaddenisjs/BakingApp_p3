@@ -3,7 +3,7 @@
     package="net.denis.sundevs.bakingapp.test" >
 
     <uses-sdk
-        android:minSdkVersion="23"
+        android:minSdkVersion="25"
         android:targetSdkVersion="25" />
 
     <instrumentation

@@ -28,12 +28,12 @@ import net.denis.sundevs.bakingapp.model.Recipe;
 import net.denis.sundevs.bakingapp.view.adapter.RecipesAdapter;
 import net.denis.sundevs.bakingapp.view.listener.RecipeOnClickListener;
 
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_RECIPE;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.LIST_DATA;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.LIST_NEED_LOADING;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.LIST_STATE;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.MAIN_COLUMN_WIDTH_DEFAULT;
-import static net.denis.sundevs.bakingapp.util.TAG.Function.nextActivity;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_RECIPE;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.LIST_DATA;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.LIST_NEED_LOADING;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.LIST_STATE;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.MAIN_COLUMN_WIDTH_DEFAULT;
+import static net.denis.sundevs.bakingapp.util.Constant.Function.nextActivity;
 
 public class MainActivity extends AppCompatActivity implements RecipeOnClickListener {
     @BindView(R.id.main_recipes_refresh)

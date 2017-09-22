@@ -15,7 +15,7 @@ import net.denis.sundevs.bakingapp.R;
  * Created by moham on 10/09/17.
  */
 
-public class TAG {
+public class Constant {
     public static class Data {
         public static final String BAKING_APP_URL = "https://d17h27t6h515a5.cloudfront.net/topher/2017/May/59121517_baking/baking.json";
         public static final String REMAINING_TIME_KEY = "splash_time";

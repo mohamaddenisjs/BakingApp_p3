@@ -24,15 +24,15 @@ import net.denis.sundevs.bakingapp.model.Steps;
 import net.denis.sundevs.bakingapp.view.fragment.RecipeDetailFragment;
 import net.denis.sundevs.bakingapp.view.fragment.RecipeStepDetailFragment;
 
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_INGREDIENTS;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_IS_RECIPE_MENU;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_RECIPE;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_STEP;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_STEPS;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_STEP_FIRST;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_STEP_LAST;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_STEP_NUMBER;
-import static net.denis.sundevs.bakingapp.util.TAG.Data.EXTRA_STEP_POSITION;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_INGREDIENTS;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_IS_RECIPE_MENU;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_RECIPE;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEPS;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP_FIRST;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP_LAST;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP_NUMBER;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP_POSITION;
 
 /**
  * Created by moham on 10/09/17.

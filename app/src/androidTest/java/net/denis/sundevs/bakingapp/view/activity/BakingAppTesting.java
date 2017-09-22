@@ -60,9 +60,9 @@ public class BakingAppTesting {
 
         onView(allOf(withId(R.id.main_recipes))).perform(actionOnItemAtPosition(0, click()));
 
-        onView(allOf(withText("Ingredients :"), childAtPosition(childAtPosition(
+        onView(allOf(withText("Ingredients:"), childAtPosition(childAtPosition(
                 IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class), 0), 0),
-                isDisplayed())).check(matches(withText("Ingredients :")));
+                isDisplayed())).check(matches(withText("Ingredients:")));
 
         onView(allOf(withId(R.id.detail_ingredients),
                 withText("- 2 CUP of Graham Cracker crumbs.\n" +
@@ -85,9 +85,9 @@ public class BakingAppTesting {
                 "- 1 CUP of heavy cream(cold).\n" +
                 "- 4 OZ of cream cheese(softened).\n")));
 
-        onView(allOf(withText("Steps :"),
+        onView(allOf(withText("Steps:"),
                 childAtPosition(childAtPosition(withId(R.id.detail_nsv), 0), 1),
-                isDisplayed())).check(matches(withText("Steps :")));
+                isDisplayed())).check(matches(withText("Steps:")));
 
         onView(allOf(withId(R.id.adapter_recipe_step_title), withText("Recipe Introduction"),
                 childAtPosition(childAtPosition(withId(R.id.adapter_recipe_step_cardview), 0), 1)))
@@ -131,7 +131,7 @@ public class BakingAppTesting {
             e.printStackTrace();
         }
 
-        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next Step"),
+        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next"),
                 withParent(withId(R.id.detail_step_navigation)))).perform(click());
 
         // Added a sleep statement to match the app's execution delay.
@@ -158,7 +158,7 @@ public class BakingAppTesting {
             e.printStackTrace();
         }
 
-        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next Step"), withParent(withId(R.id.detail_step_navigation)),
+        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next"), withParent(withId(R.id.detail_step_navigation)),
                 isDisplayed())).perform(click());
 
         // Added a sleep statement to match the app's execution delay.
@@ -170,7 +170,7 @@ public class BakingAppTesting {
             e.printStackTrace();
         }
 
-        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next Step"),
+        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next"),
                 withParent(withId(R.id.detail_step_navigation)),
                 isDisplayed())).perform(click());
 
@@ -183,7 +183,7 @@ public class BakingAppTesting {
             e.printStackTrace();
         }
 
-        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next Step"),
+        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next"),
                 withParent(withId(R.id.detail_step_navigation)),
                 isDisplayed())).perform(click());
 
@@ -196,7 +196,7 @@ public class BakingAppTesting {
             e.printStackTrace();
         }
 
-        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next Step"),
+        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next"),
                 withParent(withId(R.id.detail_step_navigation)),
                 isDisplayed())).perform(click());
 
@@ -209,7 +209,7 @@ public class BakingAppTesting {
             e.printStackTrace();
         }
 
-        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next Step"),
+        onView(allOf(withId(R.id.detail_step_nav_next), withText("Next"),
                 withParent(withId(R.id.detail_step_navigation)),
                 isDisplayed())).perform(click());
 

@@ -8,8 +8,8 @@ import java.util.GregorianCalendar;
 
 import net.denis.sundevs.bakingapp.R;
 
-import static net.denis.sundevs.bakingapp.util.TAG.Data.REMAINING_TIME_KEY;
-import static net.denis.sundevs.bakingapp.util.TAG.Function.nextActivity;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.REMAINING_TIME_KEY;
+import static net.denis.sundevs.bakingapp.util.Constant.Function.nextActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

@@ -19,7 +19,7 @@ import net.denis.sundevs.bakingapp.R;
 import net.denis.sundevs.bakingapp.model.Recipe;
 import net.denis.sundevs.bakingapp.view.listener.RecipeOnClickListener;
 
-import static net.denis.sundevs.bakingapp.util.TAG.Function.setImageResource;
+import static net.denis.sundevs.bakingapp.util.Constant.Function.setImageResource;
 
 /**
  * Created by moham on 10/09/17.
