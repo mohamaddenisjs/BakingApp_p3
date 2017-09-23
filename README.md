@@ -1,2 +1,2 @@
-# Baking-App Udacity Project
-Thats is the 3rd Project On Udacity NanoDegree Program. thanks Udacity :) 
+# BakingApp_p3
+Baking App is 3rd Project on Nanodegree Program Udacity
