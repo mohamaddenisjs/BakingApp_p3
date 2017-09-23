@@ -162,7 +162,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.v(TAG, "save instance ");
+        Log.v(TAG, "In frag's on save instance state ");
         outState.putInt(EXTRA_STEP_NUMBER, mNumber);
         outState.putBoolean(EXTRA_STEP_FIRST, mFirst);
         outState.putBoolean(EXTRA_STEP_LAST, mLast);
