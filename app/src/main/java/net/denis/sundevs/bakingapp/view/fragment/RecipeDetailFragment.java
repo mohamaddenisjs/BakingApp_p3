@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,8 +28,14 @@ import net.denis.sundevs.bakingapp.model.Steps;
 import net.denis.sundevs.bakingapp.view.adapter.RecipeStepsAdapter;
 import net.denis.sundevs.bakingapp.view.listener.RecipeStepOnClickListener;
 
+import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_INGREDIENTS;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP;
 import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEPS;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP_FIRST;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP_LAST;
+import static net.denis.sundevs.bakingapp.util.Constant.Data.EXTRA_STEP_NUMBER;
+
 
 /**
  * Created by moham on 10/09/17.
@@ -95,5 +102,19 @@ public class RecipeDetailFragment extends Fragment implements RecipeStepOnClickL
         RecipeStepEvent event = new RecipeStepEvent();
         event.setSelectedPosition(selectedPosition);
         eventBus.post(event);
+    }
+
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.v(TAG, "state");
+//        mRecipeSteps = mDetailSteps.onSaveInstanceState();
+//         outState.putParcelable(EXTRA_STEPS, mRecipeSteps);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 }

@@ -99,6 +99,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
             Constant.Function.setImageResource(getContext(), mStep.getThumbnailUrl(), mDetailStepImage);
         }
 
+
         mDetailStepPrev.setVisibility(View.VISIBLE);
         mDetailStepNext.setVisibility(View.VISIBLE);
 
@@ -147,17 +148,20 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
                 uri = Uri.parse(mStep.getVideoUrl());
             } else if (!TextUtils.isEmpty(mStep.getThumbnailUrl()) && mStep.getThumbnailUrl().substring(mStep.getThumbnailUrl().length() - 4, mStep.getThumbnailUrl().length()).equals(".mp4")) {
                 uri = Uri.parse(mStep.getThumbnailUrl());
+            } else if (!TextUtils.isEmpty(mStep.getThumbnailUrl()) && !mStep.getThumbnailUrl().substring(mStep.getThumbnailUrl().length() - 4, mStep.getThumbnailUrl().length()).equals(".mp4")) {
+                mDetailStepImage.setVisibility(View.VISIBLE);
+                Constant.Function.setImageResource(getContext(), mStep.getThumbnailUrl(), mDetailStepImage);
             }
             MediaSource mediaSource = buildMediaSource(uri);
             mPlayer.prepare(mediaSource, true, false);
         }
     }
 
-    private void updateResumePosition(long position, boolean playWhenReady) {
-        this.position = position;
-        mPlayer.seekTo(position);
-        mPlayer.setPlayWhenReady(playWhenReady);
-    }
+//    private void updateResumePosition(long position, boolean playWhenReady) {
+//        this.position = position;
+//        mPlayer.seekTo(position);
+//        mPlayer.setPlayWhenReady(playWhenReady);
+//    }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -208,7 +212,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
             mPlaybackPosition = mPlayer.getCurrentPosition();
             mCurrentWindow = mPlayer.getCurrentWindowIndex();
             mPlayWhenReady = mPlayer.getPlayWhenReady();
-            updateResumePosition(position, false);
+//            updateResumePosition(position, false);
             mPlayer.release();
             mPlayer = null;
         }
