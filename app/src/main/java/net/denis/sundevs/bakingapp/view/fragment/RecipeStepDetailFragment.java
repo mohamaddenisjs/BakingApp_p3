@@ -192,7 +192,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     public void onPause() {
         super.onPause();
         if (Util.SDK_INT <= 23) {
-            mPlayer.setPlayWhenReady(false);
+            mPlayer.setPlayWhenReady(true);
 
             releasePlayer();
         }
