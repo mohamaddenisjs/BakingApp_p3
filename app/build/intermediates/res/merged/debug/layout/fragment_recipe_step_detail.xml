@@ -13,13 +13,13 @@
         <com.google.android.exoplayer2.ui.SimpleExoPlayerView
             android:id="@+id/detail_step_video"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="@dimen/layout_height200" />
 
         <ImageView
             android:id="@+id/detail_step_image"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="@dimen/layout_height200"
+            android:layout_marginTop="@dimen/layout_marginTop"
             android:background="@android:color/darker_gray"
             android:src="@mipmap/ic_launcher" />
 
@@ -28,7 +28,7 @@
             style="?android:textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="@dimen/layout_marginTop" />
     </LinearLayout>
 
     <RelativeLayout

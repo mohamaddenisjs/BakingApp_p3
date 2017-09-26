@@ -15,6 +15,7 @@ import android.widget.TextView;
 import org.greenrobot.eventbus.EventBus;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class RecipeDetailFragment extends Fragment implements RecipeStepOnClickL
     RecyclerView mDetailSteps;
 
     private List<Ingredients> mRecipeIngredients;
-    private List<Steps> mRecipeSteps;
+    private List<Steps> mRecipeSteps = new ArrayList<>();
 
     public RecipeDetailFragment() {
 

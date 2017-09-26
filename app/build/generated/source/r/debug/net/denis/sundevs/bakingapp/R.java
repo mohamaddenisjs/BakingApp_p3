@@ -2045,21 +2045,23 @@ containing a value of this type.
         public static final int item_touch_helper_max_drag_scroll_per_frame=0x7f08005d;
         public static final int item_touch_helper_swipe_escape_max_velocity=0x7f08005e;
         public static final int item_touch_helper_swipe_escape_velocity=0x7f08005f;
-        public static final int notification_action_icon_size=0x7f080060;
-        public static final int notification_action_text_size=0x7f080061;
-        public static final int notification_big_circle_margin=0x7f080062;
+        public static final int layout_height200=0x7f080060;
+        public static final int layout_marginTop=0x7f080061;
+        public static final int notification_action_icon_size=0x7f080062;
+        public static final int notification_action_text_size=0x7f080063;
+        public static final int notification_big_circle_margin=0x7f080064;
         public static final int notification_content_margin_start=0x7f080013;
-        public static final int notification_large_icon_height=0x7f080063;
-        public static final int notification_large_icon_width=0x7f080064;
+        public static final int notification_large_icon_height=0x7f080065;
+        public static final int notification_large_icon_width=0x7f080066;
         public static final int notification_main_column_padding_top=0x7f080014;
         public static final int notification_media_narrow_margin=0x7f080015;
-        public static final int notification_right_icon_size=0x7f080065;
+        public static final int notification_right_icon_size=0x7f080067;
         public static final int notification_right_side_padding_top=0x7f080011;
-        public static final int notification_small_icon_background_padding=0x7f080066;
-        public static final int notification_small_icon_size_as_large=0x7f080067;
-        public static final int notification_subtext_size=0x7f080068;
-        public static final int notification_top_pad=0x7f080069;
-        public static final int notification_top_pad_large_text=0x7f08006a;
+        public static final int notification_small_icon_background_padding=0x7f080068;
+        public static final int notification_small_icon_size_as_large=0x7f080069;
+        public static final int notification_subtext_size=0x7f08006a;
+        public static final int notification_top_pad=0x7f08006b;
+        public static final int notification_top_pad_large_text=0x7f08006c;
         public static final int widget_margin=0x7f080010;
     }
     public static final class drawable {

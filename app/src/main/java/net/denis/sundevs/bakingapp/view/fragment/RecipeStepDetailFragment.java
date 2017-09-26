@@ -157,11 +157,11 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
         }
     }
 
-//    private void updateResumePosition(long position, boolean playWhenReady) {
-//        this.position = position;
-//        mPlayer.seekTo(position);
-//        mPlayer.setPlayWhenReady(playWhenReady);
-//    }
+    private void updateResumePosition(long position, boolean playWhenReady) {
+        this.position = position;
+        mPlayer.seekTo(position);
+        mPlayer.setPlayWhenReady(playWhenReady);
+    }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -193,18 +193,24 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
         super.onPause();
         if (Util.SDK_INT <= 23) {
             mPlayer.setPlayWhenReady(false);
-            mPlayer.stop();
-            mPlayer.release();
+
             releasePlayer();
         }
     }
 
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//        if (Util.SDK_INT > 23) {
+//            releasePlayer();
+//        }
+//    }
+
     @Override
-    public void onStop() {
-        super.onStop();
-        if (Util.SDK_INT > 23) {
-            releasePlayer();
-        }
+    public void onDestroy() {
+        super.onDestroy();
+        releasePlayer();
+
     }
 
     private void releasePlayer() {
@@ -212,7 +218,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
             mPlaybackPosition = mPlayer.getCurrentPosition();
             mCurrentWindow = mPlayer.getCurrentWindowIndex();
             mPlayWhenReady = mPlayer.getPlayWhenReady();
-//            updateResumePosition(position, false);
+            updateResumePosition(position, true);
             mPlayer.release();
             mPlayer = null;
         }
