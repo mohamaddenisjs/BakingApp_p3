@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultLoadControl;
 import com.google.android.exoplayer2.DefaultRenderersFactory;
 import com.google.android.exoplayer2.ExoPlayerFactory;
@@ -152,7 +153,9 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
                 mDetailStepImage.setVisibility(View.VISIBLE);
                 Constant.Function.setImageResource(getContext(), mStep.getThumbnailUrl(), mDetailStepImage);
             }
+
             MediaSource mediaSource = buildMediaSource(uri);
+            if (position != C.TIME_UNSET) mPlayer.seekTo(position);
             mPlayer.prepare(mediaSource, true, false);
         }
     }
@@ -170,6 +173,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
         outState.putInt(EXTRA_STEP_NUMBER, mNumber);
         outState.putBoolean(EXTRA_STEP_FIRST, mFirst);
         outState.putBoolean(EXTRA_STEP_LAST, mLast);
+        outState.putLong(EXTRA_STEP, position);
     }
 
     @Override
@@ -184,6 +188,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     public void onResume() {
         super.onResume();
         if ((Util.SDK_INT <= 23 || mPlayer == null)) {
+            mPlayer.setPlayWhenReady(true);
             initializePlayer();
         }
     }
@@ -192,9 +197,10 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     public void onPause() {
         super.onPause();
         if (Util.SDK_INT <= 23) {
-            mPlayer.setPlayWhenReady(true);
-
-            releasePlayer();
+            position = mPlayer.getCurrentPosition();
+            mPlayer.stop();
+            mPlayer.release();
+            mPlayer = null;
         }
     }
 
