@@ -174,6 +174,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
         outState.putBoolean(EXTRA_STEP_FIRST, mFirst);
         outState.putBoolean(EXTRA_STEP_LAST, mLast);
         outState.putLong(EXTRA_STEP, position);
+        initializePlayer();
     }
 
     @Override
@@ -187,8 +188,8 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     @Override
     public void onResume() {
         super.onResume();
-        if ((Util.SDK_INT <= 23 || mPlayer == null)) {
-            mPlayer.setPlayWhenReady(true);
+        if ((Util.SDK_INT <= 23 && mPlayer == null)) {
+            mPlayer.setPlayWhenReady(false);
             initializePlayer();
         }
     }
@@ -197,10 +198,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     public void onPause() {
         super.onPause();
         if (Util.SDK_INT <= 23) {
-            position = mPlayer.getCurrentPosition();
-            mPlayer.stop();
-            mPlayer.release();
-            mPlayer = null;
+            mPlayer.setPlayWhenReady(false);
         }
     }
 
