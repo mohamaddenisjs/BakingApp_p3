@@ -108,7 +108,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
         if (mLast) mDetailStepNext.setVisibility(View.GONE);
 
         if (savedInstanceState != null) {
-            mStep = savedInstanceState.getParcelable(EXTRA_STEP);
+//            mStep = savedInstanceState.getParcelable(EXTRA_STEP);
             mNumber = savedInstanceState.getInt(EXTRA_STEP_NUMBER);
             mFirst = savedInstanceState.getBoolean(EXTRA_STEP_FIRST);
             mLast = savedInstanceState.getBoolean(EXTRA_STEP_LAST);
@@ -155,7 +155,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
             }
 
             MediaSource mediaSource = buildMediaSource(uri);
-            if (position != C.TIME_UNSET) mPlayer.seekTo(position);
+//            if (position != C.TIME_UNSET) mPlayer.seekTo(position);
             mPlayer.prepare(mediaSource, true, false);
         }
     }
@@ -169,17 +169,18 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.v(TAG, "In frag's onSaveInstance state ");
+//        outState.putParcelable(EXTRA_STEP, mStep);
         outState.putInt(EXTRA_STEP_NUMBER, mNumber);
         outState.putBoolean(EXTRA_STEP_FIRST, mFirst);
         outState.putBoolean(EXTRA_STEP_LAST, mLast);
-        outState.putLong(EXTRA_STEP, position);
+
 
     }
 
     @Override
     public void onStart() {
         super.onStart();
+        hideSystemUI();
         if (Util.SDK_INT > 23) {
             initializePlayer();
         }
@@ -188,8 +189,9 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     @Override
     public void onResume() {
         super.onResume();
-        if ((Util.SDK_INT <= 23 && mPlayer == null)) {
-            mPlayer.setPlayWhenReady(false);
+        hideSystemUI();
+        if ((Util.SDK_INT <= 23 || mPlayer == null)) {
+//            mPlayer.setPlayWhenReady(true);
             initializePlayer();
         }
     }
@@ -198,10 +200,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     public void onPause() {
         super.onPause();
         if (Util.SDK_INT <= 23) {
-            position = mPlayer.getCurrentPosition();
-            mPlayer.stop();
-            mPlayer.release();
-            mPlayer = null;
+           releasePlayer();
         }
     }
 
@@ -231,7 +230,14 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
         }
     }
 
-
+    private void hideSystemUI() {
+        mDetailStepVideo.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
+                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+    }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
