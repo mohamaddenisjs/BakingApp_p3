@@ -164,12 +164,12 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
             mPlayer.prepare(mediaSource, true, false);
         }
     }
-
-    private void updateResumePosition(long position, boolean playWhenReady) {
-        this.position = position;
-        mPlayer.seekTo(position);
-        mPlayer.setPlayWhenReady(playWhenReady);
-    }
+//
+//    private void updateResumePosition(long position, boolean playWhenReady) {
+//        this.position = position;
+//        mPlayer.seekTo(position);
+//        mPlayer.setPlayWhenReady(playWhenReady);
+//    }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
