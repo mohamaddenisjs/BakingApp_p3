@@ -106,9 +106,13 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
 
         if (mFirst) mDetailStepPrev.setVisibility(View.GONE);
         if (mLast) mDetailStepNext.setVisibility(View.GONE);
+        //step3
+        position = C.TIME_UNSET;
 
         if (savedInstanceState != null) {
 //            mStep = savedInstanceState.getParcelable(EXTRA_STEP);
+            //step 4
+            position = savedInstanceState.getLong(EXTRA_STEP);
             mNumber = savedInstanceState.getInt(EXTRA_STEP_NUMBER);
             mFirst = savedInstanceState.getBoolean(EXTRA_STEP_FIRST);
             mLast = savedInstanceState.getBoolean(EXTRA_STEP_LAST);
@@ -155,7 +159,8 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
             }
 
             MediaSource mediaSource = buildMediaSource(uri);
-//            if (position != C.TIME_UNSET) mPlayer.seekTo(position);
+            //step 5
+            if (position != C.TIME_UNSET) mPlayer.seekTo(position);
             mPlayer.prepare(mediaSource, true, false);
         }
     }
@@ -200,7 +205,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
     public void onPause() {
         super.onPause();
         if (Util.SDK_INT <= 23) {
-           releasePlayer();
+            releasePlayer();
         }
     }
 
@@ -224,7 +229,7 @@ public class RecipeStepDetailFragment extends Fragment implements View.OnClickLi
             mPlaybackPosition = mPlayer.getCurrentPosition();
             mCurrentWindow = mPlayer.getCurrentWindowIndex();
             mPlayWhenReady = mPlayer.getPlayWhenReady();
-            updateResumePosition(position, true);
+//            updateResumePosition(position, true);
             mPlayer.release();
             mPlayer = null;
         }

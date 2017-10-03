@@ -24,6 +24,7 @@ public class App extends Application {
         return instance;
     }
 
+
     @Override
     public void onCreate() {
         super.onCreate();
